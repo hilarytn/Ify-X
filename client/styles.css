@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding-top: 20px;
+
+}
+.container {
+    margin: auto;
+    background-color: azure;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+    width: 60%;
+    padding: 20px;
+}
+.container h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    display: flex;
+    overflow: nowrap;
+    list-style: none;
+    text-decoration: none;
+    
+}
+ul li {
+    background-color: tomato;
+    margin: auto;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+ul li:hover {
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-decoration: underline;
+}
+.name-tag {
+    display: inline-block;
+}
+
+.name-tag p {
+    margin-top:0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+.profile-overview {
+   margin: auto;
+}
+.profile-overview img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.expenses {
+    display: flex;
+}
+
+.monthly-expenses, .weekly-expenses {
+    background-color: white;
+    width: 50%;
+    margin: 10px;
+    padding: 4px;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
