@@ -1,19 +1,22 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
-import path from 'path'
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 
 dotenv.config()
 
 connectDB()
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const app = express()
 const PORT = process.env.PORT
 
 app.get('/', (req, res) => {
-    const filePath = path.join(__dirname, 'client', 'index.html');
-    res.sendFile(filePath)
+    res.sendFile(__dirname + '/client/index.html');
 
 })
 
