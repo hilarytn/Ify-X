@@ -1,6 +1,8 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
+import path from 'path'
+
 
 dotenv.config()
 
@@ -10,7 +12,8 @@ const app = express()
 const PORT = process.env.PORT
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/client/index.html')
+    const filePath = path.join(__dirname, 'client', 'index.html');
+    res.sendFile(filePath)
 
 })
 
