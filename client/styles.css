@@ -1,6 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 .container {
@@ -8,7 +13,7 @@ body {
     background-color: azure;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 4px;
-    width: 60%;
+    width: 80%;
     padding: 20px;
 }
 .container h1 {
@@ -16,14 +21,15 @@ body {
 }
 
 ul {
-    display: flex;
-    overflow: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     text-decoration: none;
     
 }
 ul li {
-    background-color: tomato;
+    background-color: #ff6347;
     margin: auto;
     align-items: center;
     padding: 10px;
@@ -61,12 +67,30 @@ header {
 
 .expenses {
     display: flex;
+    flex: 1;
+    
 }
 
 .monthly-expenses, .weekly-expenses {
     background-color: white;
-    width: 50%;
+    width: 100%;
     margin: 10px;
     padding: 4px;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-basis: 100%;
 }
+
+@media screen and (max-width: 650px) {
+
+    ul {
+        display: block;
+        width: 100%;
+    }
+    .expenses{
+        flex-direction: column;
+    }
+    .monthly-expenses, .weekly-expenses{
+      display: block;
+      width: 100%;
+    }
+  }
