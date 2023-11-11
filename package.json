@@ -2,7 +2,7 @@
   "name": "ify-x",
   "version": "1.0.0",
   "description": "Coming Soon...",
-  "main": "app.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "nodemon app.js",
