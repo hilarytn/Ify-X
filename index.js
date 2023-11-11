@@ -10,7 +10,7 @@ const app = express()
 const PORT = process.env.PORT
 
 app.get('/', (req, res) => {
-    res.send("we are here")
+    res.sendFile(__dirname + '/client/index.html')
 
 })
 
