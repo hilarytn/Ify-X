@@ -1,4 +1,4 @@
-* {
+/** {
     box-sizing: border-box;
 }
 
@@ -93,4 +93,24 @@ header {
       display: block;
       width: 100%;
     }
+  }
+  */
+
+  .my-body {
+    background-color: tomato;
+  }
+
+  .my-nav {
+    background-color: azure;
+  }
+
+  .date-row {
+    background-color: azure;
+  }
+  footer {
+    background-color: blue;
+  }
+
+  .my-submit {
+    background-color: tomato;
   }
