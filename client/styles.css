@@ -95,6 +95,13 @@ header {
     }
   }
   */
+  body {
+    background-color: azure;
+  }
+
+  .profile-text {
+    line-height: 1;
+  }
   .my-submit {
     background-color: tomato;
   }
@@ -102,7 +109,7 @@ header {
   .link-button {
     background-color: tomato;
     color: white;
-    margin-right: 2px;;
+    margin-right: 5px;;
   }
   
   .link-button:hover{
@@ -114,10 +121,23 @@ header {
     color: white;
   }
 
+  .fetch-button:hover {
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: tomato;
+    color: white;
+  }
+
   .yearly-expenses, .monthly-expenses, .daily-expenses {
-    background-color: white;
+    background-color: tomato;
+    color: white;
     margin-right: 3px 5px 5px 0;
     padding: 4px;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 4px;
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
 }
