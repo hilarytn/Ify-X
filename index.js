@@ -15,9 +15,10 @@ const __dirname = dirname(__filename);
 const app = express()
 const PORT = process.env.PORT
 
+app.use(express.static('client'));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/client/index.html');
 
 })
 
-app.listen(PORT, () => console.log(`Server running ${PORT}`))
+app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))
