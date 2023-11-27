@@ -30,6 +30,6 @@ export const allExpenses = async (req, res) => {
         const result = Expense.find();
         res.status(201).json(result);
     } catch(error) {
-        res.status(500).error(error.message);
+        res.status(500).json({error: error.message});
     }
 } 
