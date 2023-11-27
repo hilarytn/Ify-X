@@ -13,12 +13,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static('client'));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/client/index.html');
-
 })
 
+app.get('/signup', (req, res) => {
+    res.sendFile(__dirname + '/client/signup.html')
+})
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))
