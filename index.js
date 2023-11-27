@@ -23,4 +23,6 @@ app.get('/', (req, res) => {
 app.get('/signup', (req, res) => {
     res.sendFile(__dirname + '/client/signup.html')
 })
+
+app.get('/')
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))
