@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-
+import expenseSchema from './Expense.js';
 const { Schema } = mongoose;
 
 const userSchema = new mongoose.Schema({
@@ -18,7 +18,14 @@ const userSchema = new mongoose.Schema({
         maxlength: 12, },
     email: { type: String,
         required: true },
-  });
+    password: {
+        type: String,
+        required: true,
+        minlength: 6,
+        unique: true,
+    },
+    expense: {type: [expenseSchema]}
+  },  { timestamps: true });
 
   const User = mongoose.model('User', userSchema);
 

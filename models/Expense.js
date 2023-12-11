@@ -9,8 +9,6 @@ const expenseSchema = new mongoose.Schema({
     category: { type: String, required: true },
     amount: { type: Number, required: true },
     description: { type: String },
-  });
+  }, {timestamps: true});
 
-  const Expense = mongoose.model('Expense', expenseSchema);
-
-  export default Expense;
+  export default expenseSchema;

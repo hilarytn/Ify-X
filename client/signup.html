@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ify-X App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header class="text-center">
+            <nav class="navbar navbar-expand-sm navbar-white my-nav">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="Ify_logo.PNG" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">My Sheets</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link btn link-button" href="#">Login</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link btn link-button" href="#">Sign Up</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              <hr />
+            <div class="header-container-1">
+                <h1>My Expenses Sheet</h1>
+            </div>
+        </header>
+        <hr>
+        <main>
+            <div class="row">
+                <div class="d-flex">
+                    <div >
+                        <img src="WhatsApp Image 2023-07-14 at 12.52.01.jpg" alt="Profile Picture" class="rounded-circle img-thumbnail" style="width: 150px; height: 150px;">
+                    </div>
+                    <div class="m-4">
+                        <h4 class="mb-0">Ifeoma Queeneth</h4>
+                        <p class="mt-0">@ify</p>
+                        <p class="profile-text"> I love to track my expenses here</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row all-new-del-edit m-3">
+                <button class="btn fetch-button col-sm-3 new-del-edit mb-2">New Expense +</button>
+                <button class="btn fetch-button col-sm-3 new-del-edit mb-2">Edit Expense ... </button>
+                <button class="btn fetch-button col-sm-3 new-del-edit mb-2">Delete Expense -</button>
+            </div>
+            <div class="form-data-row row">
+                <div class="row ">
+                    <form action="">
+                        <div class="row">
+                            <div class="col ">
+                                <label for="year" class="form-label"> 
+                                    <input type="number" min="2020" id="year" name="year" placeholder="2020"  class="form-control">
+                                </label>
+                            </div>
+                            <div class="col">
+                                <label for="monthSelect" class="form-label"  placeholder="Month">
+                                    <select id="monthSelect" name="month" class="form-control form-select">
+                                        <option value="01">January</option>
+                                        <option value="02">February</option>
+                                        <option value="03">March</option>
+                                        <option value="04">April</option>
+                                        <option value="05">May</option>
+                                        <option value="06">June</option>
+                                        <option value="07">July</option>
+                                        <option value="08">August</option>
+                                        <option value="09">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col">
+                                <label for="daySelect" class="form-label">
+                                    <select id="daySelect" name="day" class="form-control form-select">
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="col justify-content-end">
+                                <button type="submit" class="btn border form-control fetch-button">Fetch</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            <div class="container-fluid m-3">
+                <div class="row mb-50">
+                    <div class="yearly-expenses col-sm-4 border mt-3">
+                        <h4>Year: 1970</h4>
+                        <p><em>Total:</em>#25340</p>
+                    </div>
+                    <div class="monthly-expenses col-sm-4  border mt-3">
+                        <h4>Month: January</h4>
+                        <p><em>Total:</em>#25340</p>
+                    </div>
+                    <div class="daily-expenses col-sm-4  border mt-3">
+                        <h4>Day: Jan 2</h4>
+                        <p><em class="rounded">Total:</em>#4789</p>
+                    </div>
+                </div> 
+            </div> 
+            <div class="container-fluid m-3">
+                <div class="row mb-50">
+                    <div class="yearly-expenses col-sm-4 border mt-3">
+                        <h4>Year: 1970</h4>
+                        <p><em>Total:</em>#25340</p>
+                    </div>
+                    <div class="monthly-expenses col-sm-4  border mt-3">
+                        <h4>Month: January</h4>
+                        <p><em>Total:</em>#25340</p>
+                    </div>
+                    <div class="daily-expenses col-sm-4  border mt-3">
+                        <h4>Day: Jan 2</h4>
+                        <p><em class="rounded">Total:</em>#4789</p>
+                    </div>
+                </div> 
+            </div> 
+            <div class="container-fluid m-3">
+                <div class="row mb-50">
+                    <div class="yearly-expenses col-sm-4 border mt-3">
+                        <h4>Year: 1970</h4>
+                        <p><em>Total:</em>#25340</p>
+                    </div>
+                    <div class="monthly-expenses col-sm-4  border mt-3">
+                        <h4>Month: January</h4>
+                        <p><em>Total:</em>#25340</p>
+                    </div>
+                    <div class="daily-expenses col-sm-4  border mt-3">
+                        <h4>Day: Jan 2</h4>
+                        <p><em class="rounded">Total:</em>#4789</p>
+                    </div>
+                </div> 
+            </div>    
+            <div class="container-fluid m-3">
+                <div class="row mb-50 ">
+                    <div class="yearly-expenses col-sm-4 border mt-3">
+                        <h4>Year: 1970</h4>
+                        <p><em>Total:</em>#25340</p>
+                    </div>
+                    <div class="monthly-expenses col-sm-4  border mt-3">
+                        <h4>Month: January</h4>
+                        <p><em>Total:</em>#25340</p>
+                    </div>
+                    <div class="daily-expenses col-sm-4  border mt-3">
+                        <h4>Day: Jan 2</h4>
+                        <p><em class="rounded">Total:</em>#4789</p>
+                    </div>
+                </div> 
+            </div>         
+        </div>
+
+        </main>
+        <footer>
+            <hr />
+            <p>&copy 2023 Ify-X </p>
+        </footer>
+</body>
+</html>
