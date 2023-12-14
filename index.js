@@ -32,6 +32,6 @@ app.get('/signup', (req, res) => {
 })
 
 app.get('/logout', (req, res) => {
-    
+
 })
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))

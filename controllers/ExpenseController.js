@@ -1,6 +1,4 @@
 import User from "../models/User.js"
-import Expense from "../models/Expense.js"
-
 
 // @desc    Create a new expense
 // @route   POST /api/expense/new
@@ -8,28 +6,37 @@ import Expense from "../models/Expense.js"
 //@returns {object} The created Expense
 //@throws {Error} If request is invalid or an error occurs
 export const newExpense = async (req, res) => {
+    const {date, category, amount, description} = req.body
+    const userId = req.params._id;
     try {
-        const {date, category, amount, description} = req.body
+        const expenseDate = date ? new Date(date) : new Date();
+        const userToExpend = await User.findOneAndUpdate(
+            { _id: userId },
+            { $push: { expense: {date: expenseDate.toDateString(), category, amount, description} } },
+            { new: true }
+          );
 
-        const expense = new Expense({
-            date,
-            category,
-            amount,
-            description
-        })
+        if (!userToExpend) {
+            return res.status(404).json({ error: 'User not found' });
+          }
 
-        const savedExpense = await expense.save();
-        res.status(201).json(savedExpense);
+        const latestUserExpense = userToExpend.expense.length - 1 
+
+        res.status(201).json(userToExpend.expense[latestUserExpense]);
     } catch(error) {
-        res.status(500).json({ error: error.message });
+        res.status(500).json({ error: "Error fetching user"});
     }
 }
 
 export const allExpenses = async (req, res) => {
+    const userId = req.params._id
     try {
-        const result = Expense.find({});
-        res.status(201).json(result);
+        const result = await User.findById({_id: userId}, 'expense')
+
+        if(!result) return res.status(500).json({error: "No user found"})
+        
+        res.status(201).json(result)
     } catch(error) {
-        res.status(500).json({error: error.message});
+        res.status(500).json({error: "Could not fetch expenses for this user"});
     }
 }
