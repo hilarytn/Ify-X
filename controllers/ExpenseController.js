@@ -35,7 +35,7 @@ export const allExpenses = async (req, res) => {
 
         if(!result) return res.status(500).json({error: "No user found"})
         
-        res.status(201).json(result)
+        res.status(200).json(result)
     } catch(error) {
         res.status(500).json({error: "Could not fetch expenses for this user"});
     }
