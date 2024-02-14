@@ -40,3 +40,7 @@ export const allExpenses = async (req, res) => {
         res.status(500).json({error: "Could not fetch expenses for this user"});
     }
 }
+
+export const updateExpense = async (req, res) => {
+    const userId = req.params
+}

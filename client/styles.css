@@ -131,10 +131,14 @@ header {
     color: white;
   }
 
-  .fetch-button:hover {
+  .fetch-button:hover, .my-submit:hover {
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: tomato;
     color: white;
+  }
+
+  .my-submit:active {
+    background-color: rgb(211, 111, 94);
   }
 
   .yearly-expenses, .monthly-expenses, .daily-expenses {
@@ -154,4 +158,20 @@ footer {
     width: 100%;
     position: relative;
     bottom: 0;
+}
+
+.sign-up-login-form {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sign-up-login-form h2 {
+  margin-bottom: 20px;
+}
+
+.sign-up-login-form label {
+  font-weight: bold;
 }
