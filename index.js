@@ -44,4 +44,8 @@ app.get('/login', (req, res) => {
 app.get('/logout', (req, res) => {
 
 })
+
+app.use((req, res) => {
+    res.status(404).sendFile(__dirname + '/client/notfound.html');
+  });
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`))
