@@ -37,6 +37,10 @@ app.get('/signup', (req, res) => {
     res.sendFile(__dirname + '/client/signup.html')
 })
 
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + '/client/login.html')
+})
+
 app.get('/logout', (req, res) => {
 
 })
